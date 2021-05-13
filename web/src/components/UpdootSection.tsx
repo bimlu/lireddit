@@ -59,7 +59,7 @@ export const UpdootSection: React.FC<UpdootSectionProps> = ({ post }) => {
     );
   const [vote] = useVoteMutation();
   return (
-    <Flex direction="column" justifyContent="center" alignItems="center" mr={4}>
+    <Flex direction="row" alignItems="center">
       <IconButton
         onClick={async () => {
           if (post.voteStatus === 1) {
@@ -79,6 +79,7 @@ export const UpdootSection: React.FC<UpdootSectionProps> = ({ post }) => {
         isLoading={loadingState === "updoot-loading"}
         aria-label="updoot post"
         icon={<ChevronUpIcon />}
+        mr={2}
       />
       {post.points}
       <IconButton
@@ -100,6 +101,7 @@ export const UpdootSection: React.FC<UpdootSectionProps> = ({ post }) => {
         isLoading={loadingState === "downdoot-loading"}
         aria-label="downdoot post"
         icon={<ChevronDownIcon />}
+        ml={2}
       />
     </Flex>
   );

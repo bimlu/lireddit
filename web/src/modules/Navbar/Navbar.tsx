@@ -66,8 +66,8 @@ export const Navbar = ({}) => {
         <Box pb={4}>
           <Stack as={"nav"} spacing={4}>
             {Links.map((link) => (
-              <NextLink href={`/${link}`}>
-                <Link key={link}>{link}</Link>
+              <NextLink key={link} href={`/${link}`}>
+                <Link>{link}</Link>
               </NextLink>
             ))}
           </Stack>
