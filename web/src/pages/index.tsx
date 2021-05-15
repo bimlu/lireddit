@@ -40,7 +40,7 @@ const Index = () => {
         <Stack spacing={8}>
           {data!.posts.posts.map((p) =>
             !p ? null : (
-              <Box key={p.id} p={5} borderBottom="1px solid #ccc">
+              <Box key={p.id} pb={4} borderBottom="1px solid #ddd">
                 <Box flex={1}>
                   <NextLink href="/post/[id]" as={`/post/${p.id}`}>
                     <Link>
